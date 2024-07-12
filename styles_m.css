@@ -1,0 +1,173 @@
+:root {
+    --bg-width-desktop: 1792px;
+    --bg-height-desktop: 1024px;
+    --bg-width-mobile: 700px;
+    --bg-height-mobile: 1280px;
+    --tab-width-desktop: 305px;
+    --scaled-tab-width: calc(0.7 * 100% / 5); /* 70% of the total width divided by 5 buttons */
+    --spacing-desktop: calc((100% - 5 * var(--scaled-tab-width)) / 6); /* Remaining 30% divided by 6 (3 gaps on each side) */
+    --section-width-desktop: 70%; /* Width for section content desktop */
+    --section-width-mobile: 90%; /* Width for section content mobile */
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.foreground {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.nav-btn, .buy-btn, .back-button {
+    position: absolute;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: 2;
+    height: auto;
+}
+
+.nav-btn, .buy-btn {
+    width: var(--scaled-tab-width);
+    bottom: 9.7%; /* Position adjusted */
+}
+
+#tab1 {
+    left: var(--spacing-desktop);
+}
+
+#tab2 {
+    left: calc(var(--spacing-desktop) * 2 + var(--scaled-tab-width));
+}
+
+#tab3 {
+    left: calc(var(--spacing-desktop) * 3 + var(--scaled-tab-width) * 2);
+}
+
+#tab4 {
+    left: calc(var(--spacing-desktop) * 4 + var(--scaled-tab-width) * 3);
+}
+
+#tab5 {
+    left: calc(var(--spacing-desktop) * 5 + var(--scaled-tab-width) * 4);
+}
+
+.buy-btn.desktop {
+    top: 4.9%; /* Position adjusted */
+    left: calc((1640 / var(--bg-width-desktop)) * 100%);
+    width: 6%; /* Size adjusted */
+}
+
+.buy-btn.mobile {
+    top: 70%; /* Adjusted position */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%; /* Adjusted size */
+}
+
+.nav-btn:hover, .buy-btn:hover, .back-button:hover {
+    transform: scale(1.15);
+}
+
+.section {
+    padding: 100px;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+}
+
+.section.desktop {
+    width: var(--section-width-desktop);
+}
+
+.section.mobile {
+    width: var(--section-width-mobile);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-button {
+    top: 20px;
+    left: 20px;
+    width: 50px; /* Adjust as necessary */
+}
+
+.home {
+    background-color: #eca92f;
+}
+
+.about {
+    background-color: #f2d9a7;
+}
+
+.tokenomics {
+    background-color: #e87f48;
+}
+
+.socials {
+    background-color: #aa7c5e;
+}
+
+.buy {
+    background-color: #997e4f;
+}
+
+/* Hide mobile assets on desktop and vice versa */
+.mobile {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: block;
+    }
+
+    .buy-btn.mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .mobile {
+        display: block;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .buy-btn.desktop {
+        display: none;
+    }
+}

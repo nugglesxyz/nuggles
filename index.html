@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$Nuggles</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Desktop Background and Buttons -->
+        <img src="bg_animated.gif" alt="Background" class="background desktop">
+
+        <div class="nav-text desktop" id="text1">Home</div>
+        <img src="tab1.png" alt="Home" class="nav-btn desktop" id="tab1" onclick="scrollToSection('home')">
+
+        <div class="nav-text desktop" id="text2">About</div>
+        <img src="tab2.png" alt="What is $Nuggles" class="nav-btn desktop" id="tab2" onclick="scrollToSection('about')">
+
+        <div class="nav-text desktop" id="text3">Tokenomics</div>
+        <img src="tab3.png" alt="Tokenomics" class="nav-btn desktop" id="tab3" onclick="scrollToSection('tokenomics')">
+
+        <div class="nav-text desktop" id="text4">Socials</div>
+        <img src="tab4.png" alt="Socials" class="nav-btn desktop" id="tab4" onclick="scrollToSection('socials')">
+
+        <div class="nav-text desktop" id="text5">Buy</div>
+        <img src="tab5.png" alt="Buy" class="nav-btn desktop" id="tab5" onclick="scrollToSection('buy')">
+
+        <!-- Contract Address for Desktop View -->
+        <div class="contract-address-container desktop" style="position: absolute; top: 2.5%; left: calc((1160 / 1792) * 100vw); width: 25%; padding: 5px 10px; background-color: #f9e8c4; border: 1px solid #d1b394; border-radius: 10px; font-family: 'Cat-Comic', Arial, sans-serif; text-align: center; line-height: 1; display: flex; justify-content: center; align-items: center; z-index: 2;">
+            <span class="contract-address-text" style="flex: 1; font-size: 0.8em;">Contract Address: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</span>
+            <button onclick="copyToClipboard()" style="margin-left: 5px; padding: 0; background: none; border: none; font-size: 0.8em;">📋</button>
+        </div>
+
+        <img src="buy_button.png" alt="Buy" class="buy-btn desktop" id="buy_button" onclick="scrollToSection('buy')" style="position: absolute; top: 4.9%; left: calc((1640 / 1792) * 100vw); width: 6%; z-index: 2; transition: transform 0.3s ease; cursor: pointer;">
+        <img src="wheat_foreground.gif" alt="Foreground" class="foreground desktop">
+
+        <!-- Mobile Background and Button -->
+        <img src="bg_animated_mobile.gif" alt="Background" class="background mobile">
+        <img src="buy_button_mobile.png" alt="Buy" class="buy-btn mobile" id="buy_button_mobile" onclick="scrollToSection('buy')">
+        <img src="wheat_foreground_mobile.gif" alt="Foreground" class="foreground mobile">
+
+        <!-- Contract Address for Mobile View -->
+        <div class="contract-address-container mobile" style="position: relative; margin-top: 180%; width: 90%; padding: 5px 10px; background-color: #f9e8c4; border: 1px solid #d1b394; border-radius: 10px; font-family: 'Cat-Comic', Arial, sans-serif; text-align: center; line-height: 1; display: flex; justify-content: center; align-items: center; z-index: 3;">
+            <span class="contract-address-text" style="flex: 1; font-size: 0.8em;">Contract Address: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</span>
+            <button onclick="copyToClipboard()" style="margin-left: 5px; padding: 0; background: none; border: none; font-size: 0.8em;">📋</button>
+        </div>
+    </div>
+
+    <div id="home" class="section home desktop">
+        <div class="hero-home" data-animation="slideInLeft">
+            <h1>A Warm Embrace Amidst the Crypto Chaos</h1>
+        </div>
+        <div class="home-content">
+            <div class="home-image-container">
+                <img src="home.gif" alt="Mommy Nuggles" class="home-image">
+            </div>
+            <p>In the whirlwind of new cryptocurrencies that hit the market every second, finding a reliable and comforting investment can feel like navigating through a storm. But amidst the chaos, there is a haven of warmth and security. Welcome to <strong>$Nuggles</strong> Coin. </br></br>Inspired by the loving and nurturing image of <strong style="color: #d16268;">Matt Furie</strong>'s Mommy Nuggles, $Nuggles Coin offers you a comforting embrace, a warm mommy’s snuggle in the middle of the storm of shitcoins.</p>
+        </div>
+    </div>
+
+    <div id="home" class="section home mobile">
+        <div class="hero-home" data-animation="slideInLeft">
+            <h1>A Warm Embrace Amidst the Crypto Chaos</h1>
+        </div>
+        <div class="home-image-container">
+            <img src="home.gif" alt="Mommy Nuggles" class="home-image">
+        </div>
+        <div class="home-content">
+            <p>In the whirlwind of new cryptocurrencies that hit the market every second, finding a reliable and comforting investment can feel like navigating through a storm. But amidst the chaos, there is a haven of warmth and security. Welcome to <strong>$Nuggles</strong> Coin. </br></br>Inspired by the loving and nurturing image of <strong style="color: #d16268;">Matt Furie</strong>'s Mommy Nuggles, $Nuggles Coin offers you a comforting embrace, a warm mommy’s snuggle in the middle of the storm of shitcoins.</p>
+        </div>
+    </div>
+
+
+    <div id="about" class="section about desktop">
+        <img src="back_button.png" alt="< Back" class="back-button" onclick="scrollToSection('home')">
+        <div class="hero-about" data-animation="slideInRight">
+            <h1>What is $NUGGLES?</h1>
+        </div>
+        <h2 style="color: #fff;">The Story of $Nuggles Coin</h2>
+        <div class="about-content">
+            <p>In 2019, the whimsical and heartwarming art of <span style="color: #d16268;">Matt Furie</span> introduced us to <strong>Mommy Nuggles</strong> (image below), a nurturing figure embracing her little nuggles with warmth and love. This image symbolizes comfort, safety, and unconditional love—values that are rare yet desperately needed in the volatile world of cryptocurrencies.</p>
+            <p><span style="color: #d16268;">$Nuggles</span> was created to embody these cherished values, offering a safe and nurturing haven amidst the unpredictable and often chaotic crypto market. It's a heartfelt celebration of Matt's art, stepping away from the conventional/popular norms (think boys club) and embracing a more inclusive and loving community. More than just a token, $Nuggles is a family built on trust, warmth, and mutual support.</p>
+        </div>    
+        <div class="about-image-container">
+        <img src="original.jpg" alt="About Image" class="about-image">
+        </div>
+    </div>
+
+    <div id="about" class="section about mobile">
+        <img src="back_button.png" alt="< Back" class="back-button" onclick="scrollToSection('home')">
+        <div class="hero-about" data-animation="slideInRight">
+            <h1>What is $NUGGLES?</h1>
+        </div>
+        <h2 style="color: #fff;">The Story of $Nuggles Coin</h2>
+        <div class="about-content">
+            <p>In 2019, the whimsical and heartwarming art of <span style="color: #d16268;">Matt Furie</span> introduced us to <strong>Mommy Nuggles</strong> (image below), a nurturing figure embracing her little nuggles with warmth and love. This image symbolizes comfort, safety, and unconditional love—values that are rare yet desperately needed in the volatile world of cryptocurrencies.</p>
+            <br><p><span style="color: #d16268;">$Nuggles</span> was created to embody these cherished values, offering a safe and nurturing haven amidst the unpredictable and often chaotic crypto market. It's a heartfelt celebration of Matt's art, stepping away from the conventional/popular norms (think boys club) and embracing a more inclusive and loving community. More than just a token, $Nuggles is a family built on trust, warmth, and mutual support.</p>
+        </div>    
+        <div class="about-image-container">
+        <img src="original.jpg" alt="About Image" class="about-image">
+        </div>
+    </div>
+
+
+    <div id="tokenomics" class="section tokenomics desktop">
+          <img src="back_button.png" alt="< Back" class="back-button" onclick="scrollToSection('home')">
+        <div class="hero-tokenomics" data-animation="slideInLeft">
+            <h1>Let's Talk Tokens, Shall We?</h1>
+        </div>
+        <div class="tokenomics-content">
+            <p>Let's break down the numbers, you know, some good old chicken scratch math to... awww just look at them babies! Don't you just want to $snuggle with them?</p>
+        </div>
+        <div class="tokenomics-content">
+                <h1><span style="color: #fff;"> TOTAL SUPPLY: 800 MILLION. </span><span style="color: #000;">FAIR LAUNCH. 0/0 TAXES. CONTRACT RENOUNCED. LIQUIDITY BURNT.</span></h1>
+        </div>
+            <div class="tokenomics-image-container">
+                <img src="tokenomics.gif" alt="Nuggles" class="tokenomics-image">
+            </div>
+
+
+         <div class="contract-address-container">
+            <p class="contract-address-text">$NUGGLES Contract Address: <span id="contract-address" style="color: #e87f48;">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</span></p>
+            <button class="copy-button" onclick="copyToClipboard()">📋</button>
+        </div>
+
+    </div>
+
+        <div id="tokenomics" class="section tokenomics mobile">
+              <img src="back_button.png" alt="< Back" class="back-button" onclick="scrollToSection('home')">
+        <div class="hero-tokenomics" data-animation="slideInLeft">
+            <h1>Let's Talk Tokens, Shall We?</h1>
+        </div>
+        <div class="tokenomics-content">
+            <p>Let's break down the numbers, you know, some good old chicken scratch math to... awww just look at them babies! Don't you just want to $snuggle with them?</p>
+        </div>
+
+        <div class="tokenomics-content">
+                <h1><span style="color: #fff;"> TOTAL SUPPLY: 800 MILLION. </span></h1>
+                <h2><span style="color: #000;">FAIR LAUNCH. 0/0 TAXES. CONTRACT RENOUNCED. LIQUIDITY BURNT.</span></h2>
+        </div>
+            <div class="tokenomics-image-container">
+                <img src="tokenomics.gif" alt="Nuggles" class="tokenomics-image">
+            </div>
+
+        <div class="contract-address-container">
+            <p class="contract-address-text">$NUGGLES Contract Address: <span id="contract-address" style="color: #e87f48;">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</span></p>
+            <button class="copy-button" onclick="copyToClipboard()">📋</button>
+        </div>
+
+    </div>
+
+
+    <div id="socials" class="section socials desktop">
+        <img src="back_button.png" alt="< Back" class="back-button" onclick="scrollToSection('home')">
+        <div class="hero-socials" data-animation="slideInRight">
+            <h1>Get Your $Nuggles Fix Here!</h1>
+            <h2>GREAT. VIBES. ONLY.</h2>
+        </div>
+
+        <div class="socials-content">
+            <div class="text-container">
+                    <span style="color: #f2d9a7;">Telegram:</span> Join our Telegram group for real-time updates and discussions.<br>
+                    <span style="color: #f2d9a7;">Twitter:</span> Follow us on Twitter for the latest news and announcements.<br>
+                    <span style="color: #f2d9a7;">Twitter Feed:</span> Check out our Twitter feed to stay engaged with our community.
+            </div>
+            <div class="image-container">
+                <img src="socials.gif" alt="Nuggles" class="socials-image">
+            </div>
+        </div>
+
+        <p>Socials & Web3 Links</p>
+            <div class="icons">
+                <a href="https://twitter.com/NugglesXYZ" target="_blank">
+                    <img src="./socials/x_icon.svg" alt="X" class="icon">
+                </a>
+                <a href="https://t.me/nugglesxyz" target="_blank">
+                    <img src="./socials/telegram_icon.svg" alt="Telegram" class="icon">
+                </a>
+                <img src="./socials/dexs_icon.svg" alt="Dexscreener" class="icon">
+                <img src="./socials/dext_icon.svg" alt="Dextools" class="icon">
+                <img src="./socials/cg_icon.svg" alt="CoinGecko" class="icon">
+            </div>
+
+         <p>Exchanges (More Coming ...)</p>
+            <div class="exchanges">
+                <div class="exchange">
+                    <img src="./socials/raydium_icon.png" alt="Raydium">
+                </div>
+            </div>
+    </div>
+
+    <div id="socials" class="section socials mobile">
+        <img src="back_button.png" alt="< Back" class="back-button" onclick="scrollToSection('home')">
+        <div class="hero-socials" data-animation="slideInRight">
+            <h1>Get Your $Nuggles Fix Here!</h1>
+            <h2>GREAT. VIBES. ONLY.</h2>
+        </div>
+
+
+        <div class="socials-content">
+                    <span style="color: #f2d9a7;">Telegram:</span> Join our Telegram group for real-time updates and discussions.<br>
+                    <span style="color: #f2d9a7;">Twitter:</span> Follow us on Twitter for the latest news and announcements.<br>
+                    <span style="color: #f2d9a7;">Twitter Feed:</span> Check out our Twitter feed to stay engaged with our community.
+            <div class="image-container">
+                <img src="socials.gif" alt="Nuggles" class="socials-image">
+            </div>
+        </div>
+
+         <p>Socials & Web3 Links</p>
+            <div class="icons">
+                <img src="./socials/x_icon.svg" alt="X" class="icon">
+                <img src="./socials/telegram_icon.svg" alt="Telegram" class="icon">
+                <img src="./socials/dexs_icon.svg" alt="Dexscreener" class="icon">
+                <img src="./socials/dext_icon.svg" alt="Dextools" class="icon">
+                <img src="./socials/cg_icon.svg" alt="CoinGecko" class="icon">
+            </div>
+
+         <p>Exchanges (More Coming ...)</p>
+            <div class="exchanges">
+                <div class="exchange">
+                    <img src="./socials/uniswap_icon.svg" alt="Uniswap">
+                </div>
+            </div>
+    </div>
+
+
+    <div id="buy" class="section buy desktop">
+    <img src="back_button.png" alt="< Back" class="back-button" onclick="scrollToSection('home')">
+    <div class="hero-buy" data-animation="slideInRight">
+        <h1>Get Your Mommy $Nuggles!</h1>
+    </div>
+    <div class="buy-content">
+        <div class="buy-text-container">
+            <h2><span style="color: #eba83e;">Come home to some warm Mommy $Nuggles!</span></h2>
+            <p>$Nuggles Coin is here to bring a sense of security and warmth to your degen portfolio. When you embrace $Nuggles, you’re not just embracing a coin; you’re joining a family that cares for each member. Who hates snuggles? Nobody! It’s time to <span style="color: #fff;">#getYoMommyNuggles</span> and feel the love.</p>
+            <p>Purchasing $Nuggles Coin is simple and easy. Use the embedded Uniswap frame below to buy $Nuggles directly. <br> Most importantly, this is <span style="color: #fff;">NOT</span> investment or financial advice & we are not affiliated with Matt Furie or Elon Musk or anyone else [although we wish we were]. Use your best judgement before buying as always!</p>
+        </div>
+        <div class="iframe-container">
+            <iframe src="https://app.uniswap.org/#/swap" width="100%" height="500px" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+
+        <!-- Legal Disclaimer and Risk Disclosure Buttons -->
+        <div class="disclaimer-buttons">
+            <button onclick="openPopup('legalDisclaimer')">Legal Disclaimer</button>
+            <button onclick="openPopup('riskDisclosure')">Risk Disclosure</button>
+        </div>
+
+        <!-- Popup Modal -->
+        <div id="legalDisclaimer" class="popup-modal">
+            <div class="popup-content">
+                <span class="close-button" onclick="closePopup('legalDisclaimer')">&times;</span>
+                <h2>Legal Disclaimer</h2>
+                <p>The content on the $Nuggles Token website is not meant to be understood as investment, financial, trading, or any form of advice, and should not be interpreted as such. $Nuggles Token does not suggest that any token should be bought, sold, or held by you. It is important to perform your own thorough research and consult with your financial advisor prior to making any investment decisions. By acquiring $Nuggles Token, you acknowledge that you are not obtaining a security or investment and you agree to absolve $Nuggles Token of any responsibility for any losses or taxes you may face. Additionally, you accept that $Nuggles Token is offered "as is" without any obligation for support or services. Expectations from $Nuggles Token should be none. Although $Nuggles Token is designed for social networking and is not a registered digital currency, it is highly advised that individuals in locations where it is banned by the government refrain from purchasing it, as $Nuggles Token cannot guarantee adherence to the legal requirements of your region. Always ensure your actions are in full compliance with local laws and regulations before making any purchases.</p>
+                <button class="close-popup" onclick="closePopup('legalDisclaimer')">Close</button>
+            </div>
+        </div>
+
+        <div id="riskDisclosure" class="popup-modal">
+            <div class="popup-content">
+                <span class="close-button" onclick="closePopup('riskDisclosure')">&times;</span>
+                <h2>Risk Disclosure</h2>
+                <p>Please note there are always risks associated with smart-contracts. Please use at your own risk. $Nuggles and any associated website/account is not a registered broker, analyst, or investment advisor. Everything that’s provided on this site/account is purely for guidance, informational and educational purposes, and fun. All information contained herein should be independently verified and confirmed. We do not accept any liability for any loss or damage whatsoever caused in reliance upon such information or services. Please be aware of the risks involved with trading in any financial markets. Do not trade with money that you cannot afford to lose. Always ensure your actions are in full compliance with local laws and regulations before making any finalcial decisions.</p>
+                <button class="close-popup" onclick="closePopup('riskDisclosure')">Close</button>
+            </div>
+        </div>
+
+        <div class="contract-address-container-buy">
+            <p class="contract-address-text">$NUGGLES Contract Address: <span id="contract-address" style="color: #e87f48;">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</span></p>
+            <button class="copy-button" onclick="copyToClipboard()">📋</button>
+        </div>
+
+
+    </div>
+
+
+    <div id="buy" class="section buy mobile">
+        <img src="back_button.png" alt="< Back" class="back-button" onclick="scrollToSection('home')">
+        <div class="hero-buy" data-animation="slideInRight">
+            <h1>Get Your Mommy $Nuggles!</h1>
+        </div>
+        <div class="buy-content">
+                $Nuggles Coin is here to bring a sense of security and warmth to your degen portfolio. When you embrace $Nuggles, you’re not just embracing a coin; you’re joining a family that cares for each member. Who hates snuggles? Nobody! It’s time to <br><span style="color: #fff;">#getYoMommyNuggles</span><br> and feel the love.<br>
+                Purchasing $Nuggles Coin is simple and easy. Use the embedded Uniswap frame below to buy $Nuggles directly. <br>
+                Most importantly, this is <span style="color: #fff;">NOT</span> investment or financial advice & we are not affiliated with Matt Furie or Elon Musk or anyone else [although we wish we were]. Use your best judgement before buying as always!
+            <div class="iframe-container">
+                <iframe src="https://app.uniswap.org/#/swap" width="100%" height="500px" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+
+        <!-- Legal Disclaimer and Risk Disclosure Buttons -->
+        <div class="disclaimer-buttons">
+            <button onclick="openPopup('legalDisclaimer')">Legal Disclaimer</button>
+            <button onclick="openPopup('riskDisclosure')">Risk Disclosure</button>
+        </div>
+
+        <!-- Popup Modal -->
+        <div id="legalDisclaimer" class="popup-modal">
+            <div class="popup-content">
+                <span class="close-button" onclick="closePopup('legalDisclaimer')">&times;</span>
+                <h2>Legal Disclaimer</h2>
+                <p>The content on the $Nuggles Token website is not meant to be understood as investment, financial, trading, or any form of advice, and should not be interpreted as such. $Nuggles Token does not suggest that any token should be bought, sold, or held by you. It is important to perform your own thorough research and consult with your financial advisor prior to making any investment decisions. By acquiring $Nuggles Token, you acknowledge that you are not obtaining a security or investment and you agree to absolve $Nuggles Token of any responsibility for any losses or taxes you may face. Additionally, you accept that $Nuggles Token is offered "as is" without any obligation for support or services. Expectations from $Nuggles Token should be none. Although $Nuggles Token is designed for social networking and is not a registered digital currency, it is highly advised that individuals in locations where it is banned by the government refrain from purchasing it, as $Nuggles Token cannot guarantee adherence to the legal requirements of your region. Always ensure your actions are in full compliance with local laws and regulations before making any purchases.</p>
+                <button class="close-popup" onclick="closePopup('legalDisclaimer')">Close</button>
+            </div>
+        </div>
+
+        <div id="riskDisclosure" class="popup-modal">
+            <div class="popup-content">
+                <span class="close-button" onclick="closePopup('riskDisclosure')">&times;</span>
+                <h2>Risk Disclosure</h2>
+                <p>Please note there are always risks associated with smart-contracts. Please use at your own risk. $Nuggles and any associated website/account is not a registered broker, analyst, or investment advisor. Everything that’s provided on this site/account is purely for guidance, informational and educational purposes, and fun. All information contained herein should be independently verified and confirmed. We do not accept any liability for any loss or damage whatsoever caused in reliance upon such information or services. Please be aware of the risks involved with trading in any financial markets. Do not trade with money that you cannot afford to lose. Always ensure your actions are in full compliance with local laws and regulations before making any finalcial decisions.</p>
+                <button class="close-popup" onclick="closePopup('riskDisclosure')">Close</button>
+            </div>
+        </div>
+
+        <div class="contract-address-container">
+            <p class="contract-address-text">$NUGGLES Contract Address: <span id="contract-address" style="color: #e87f48;">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</span></p>
+            <button class="copy-button" onclick="copyToClipboard()">📋</button>
+        </div>
+
+    </div>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

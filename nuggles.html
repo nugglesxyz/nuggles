@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$Nuggles</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="bg_animated.gif" alt="Background" class="background">
+
+        <img src="tab1.png" alt="Home" class="nav-btn" id="tab1" onclick="scrollToSection('home')">
+        <img src="tab2.png" alt="What is $Nuggles" class="nav-btn" id="tab2" onclick="scrollToSection('about')">
+        <img src="tab3.png" alt="Tokenomics" class="nav-btn" id="tab3" onclick="scrollToSection('tokenomics')">
+        <img src="tab4.png" alt="Socials" class="nav-btn" id="tab4" onclick="scrollToSection('socials')">
+        <img src="tab5.png" alt="Buy" class="nav-btn" id="tab5" onclick="scrollToSection('buy')">
+        <img src="buy_button.png" alt="Buy" class="buy-btn" id="buy_button" onclick="scrollToSection('buy')">
+
+        <img src="wheat_foreground.gif" alt="Foreground" class="foreground">
+    </div>
+
+    <div id="home" class="section home">
+        <h1>Home</h1>
+        <p>$Nuggles Coin: The Warm Embrace Amidst the Crypto Chaos</p>
+        <p>Welcome to $Nuggles Coin. In the whirlwind of new cryptocurrencies that hit the market every second, finding a reliable and comforting investment can feel like navigating through a storm. But amidst the chaos, there is a haven of warmth and security: $Nuggles Coin. Inspired by the loving and nurturing image of Mommy Nuggles, $Nuggles Coin offers you a comforting embrace, a warm mommy’s snuggle in the middle of the storm of shitcoins.</p>
+    </div>
+    <div id="about" class="section about">
+        <img src="back_button.png" alt="< Back" class="back-button" onclick="scrollToSection('home')">
+        <h1>What is $Nuggles?</h1>
+        <h2>The Story of $Nuggles Coin</h2>
+        <p>In 2019, the whimsical and heartwarming art of Matt Furie introduced us to Mommy Nuggles, a nurturing figure embracing her little nuggles with warmth and love. This image symbolizes comfort, safety, and unconditional love—values that are rare yet desperately needed in the volatile world of cryptocurrencies.</p>
+        <p>$Nuggles Coin was created to embody these values, providing a safe haven for degens amidst the unpredictable and often tumultuous crypto market. Our coin is more than just any other token on the block; it's a community built on trust, warmth, and mutual support.</p>
+    </div>
+    <div id="tokenomics" class="section tokenomics">
+        <img src="back_button.png" alt="< Back" class="back-button" onclick="scrollToSection('home')">
+        <h1>Tokenomics</h1>
+        <h2>Why $Nuggles Coin?</h2>
+        <p>Warmth in Volatility: Just like a mother’s hug, $Nuggles Coin offers love and reassurance in a market flooded with fleeting and unreliable coins.</p>
+        <p>Community of Love: Join a community that values support, comfort, and genuine connections over mere numbers.</p>
+        <p>Reap the Love: Experience the benefits of a belonging that grows with the love and trust of its community.</p>
+        <h2>Token Distribution</h2>
+        <ul>
+            <li>20% set aside for team, exchange listings, promotions, and marketing.</li>
+            <li>5% sent to Matt Furie's wallet as a tribute to his contributions.</li>
+            <li>The remaining 75% is available for LP and public holding, ensuring broad distribution.</li>
+            <li>Fair launch with no presale.</li>
+            <li>0% buy or sell tax, making transactions straightforward and cost-effective.</li>
+            <li>Contract renounced, ensuring full decentralization and community control.</li>
+        </ul>
+    </div>
+    <div id="socials" class="section socials">
+        <img src="back_button.png" alt="< Back" class="back-button" onclick="scrollToSection('home')">
+        <h1>Socials</h1>
+        <h2>Join Our Community</h2>
+        <p>Join our vibrant and supportive community on social media:</p>
+        <ul>
+            <li>Telegram: Join our Telegram group for real-time updates and discussions.</li>
+            <li>Twitter: Follow us on Twitter for the latest news and announcements.</li>
+            <li>Twitter Feed: Check out our Twitter feed to stay engaged with our community.</li>
+        </ul>
+    </div>
+    <div id="buy" class="section buy">
+        <img src="back_button.png" alt="< Back" class="back-button" onclick="scrollToSection('home')">
+        <h1>Buy</h1>
+        <p>Come home to some warm Mommy $Nuggles!</p>
+        <p>$Nuggles Coin is here to bring a sense of security and warmth to your degen portfolio. When you embrace $Nuggles, you’re not just embracing a coin; you’re joining a family that cares for each member. Who hates snuggles? Nobody! It’s time to #getYoMommyNuggles and feel the love.</p>
+        <p>Purchasing $Nuggles Coin is simple and easy. Use the embedded Uniswap frame below to buy $Nuggles directly. Most importantly, this is NOT investment or financial advice, so use your best judgement as always!</p>
+        <iframe src="https://app.uniswap.org/#/swap" width="100%" height="500px" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
